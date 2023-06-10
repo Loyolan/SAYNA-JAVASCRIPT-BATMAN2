@@ -71,7 +71,6 @@ section[class='content'] div {
 }
 
 section[class='content'] div div {
-    display: block;
     padding-right: 3.75vw;
     text-align: right;
 }
@@ -84,7 +83,7 @@ section[class='content'] div div img {
 section[class='content'] div div p {
     text-align: center;
     color: white;
-    font-size: 1.125em;
+    font-size: 0.75em;
     font-weight: bolder;
 }
 
