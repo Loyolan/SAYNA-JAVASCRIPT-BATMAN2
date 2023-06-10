@@ -71,36 +71,34 @@
                 <img src="./assets/images/logos/flèche_down_header.png" alt='Flèche down header'>
             </div>
         </section>
-        <section class="game">
+        <section class="game" id="start">
             <div class="content-game">
                 <h2>connaissez vous bien le chevalier noir ?</h2>
                 <div>
                     <img src="./assets/images/game/Batgame_2.png">
                 </div>
-                <button>DÉMARRER LE QUIZ</button>
+                <button onclick="startGame()">DÉMARRER LE QUIZ</button>
             </div>
         </section>
         <section class="game" id="game">
             <div class="content-game">
-                <h2><span id="progression">1</span>/15</h2>
+                <h2><span id="progression"></span>/15</h2>
                 <div class="questions">
-                    <p class="question" id="question">
-                        Quel est l’autre nom de l’Homme-Mystère ?
+                    <p class="question fade-in-start" id="question">
+                        
                     </p>
                     <div class="responses">
                         <div class="image">
-                            <img id="image" src="assets/images/game/Batgame_3.png">
+                            <img class="fade-in-start" id="image" src="">
                         </div>
                         <div class="choix">
                             <ul id="choices">
-                                <li><input type="checkbox" name=""> Le Sphinx</li>
-                                <li><input type="checkbox" name=""> Saphir</li>
-                                <li><input type="checkbox" name=""> Le Joker</li>
+                                
                             </ul>
                         </div>
                     </div>
                 </div>
-                <button>QUESTION SUIVANT</button>
+                <button onclick="next()">QUESTION SUIVANT</button>
             </div>
         </section>
     </main>

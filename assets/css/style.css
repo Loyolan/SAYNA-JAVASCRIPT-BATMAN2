@@ -278,6 +278,7 @@ main {
     animation-name: slide-top;
     animation-duration: 3s;
 }
+
 @keyframes slide-top {
     from {
         opacity: 0;

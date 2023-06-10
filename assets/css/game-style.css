@@ -64,7 +64,7 @@ body {
  *  || GAME STYLE 
  */
 .game .content-game .questions {
-    height: 33vw;
+    height: 32vw;
     padding: 5% 10% 0 10%;
 }
 
@@ -103,4 +103,8 @@ p[class='question'] {
     width: 1.5em;
     height: 1.5em;
     margin-right: 1.125em;
+}
+
+#game {
+    display: none;
 }
