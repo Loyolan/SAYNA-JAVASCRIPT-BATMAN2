@@ -246,6 +246,13 @@ main {
     transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 }
 
+.fade-zoom {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
+  transform: scale(0); /* Définit l'échelle initiale de 0 */
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;

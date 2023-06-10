@@ -97,3 +97,14 @@ scrollToEnemy.addEventListener('click', ()=>{
     behavior: 'smooth'
   })
 })
+
+// VIDEO
+function pauseOrPlay() {
+  var playerIcon = document.getElementById('player-icon');
+  var video = document.getElementById('video');
+  if (video.paused) {
+    playerIcon.style.display = "none";
+  } else {
+    playerIcon.style.display = "block";
+  }
+}
