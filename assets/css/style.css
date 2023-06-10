@@ -1,0 +1,255 @@
+
+ /* 
+    ||   CSS GLOBAL FOR ALL PAGES
+*/
+/* Import all fonts */
+@font-face {
+    src: url('../fonts/Rajdhani/Rajdhani-Medium.ttf');
+    font-family: 'Rajdhani-Medium';
+}
+
+@font-face {
+    src: url('../fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf');
+    font-family: 'SpaceGrotesk-Regular';
+}
+
+/*===========================================================================
+    GLOBAL STYLE
+=============================================================================*/
+
+html {
+    color: white;
+    /*font-family: 'Rajdhani-Medium';*/
+    overflow-x: hidden;
+    font-size: 1.25vw;
+    font-family: 'Rajdhani-Medium';
+}
+
+/* DEFINE ALL FONTS */
+button {
+    font-family: 'Rajdhani-Medium';
+    font-size: 1.25em;
+}
+
+button span {
+    opacity: 1;
+}
+
+h1 {
+    font-family: 'Rajdhani-Medium';
+    font-size: 2.25em;
+}
+
+h2 {
+    font-family: 'SpaceGrotesk-Regular';
+    font-size: 0.75em;
+    letter-spacing: 0,1875em;
+}
+
+.sous-titre {
+    font-family: 'SpaceGrotesk-Regular';
+    font-size: 1.375em;
+}
+
+.text {
+    font-family: 'SpaceGrotesk-Regular';
+    font-size: 0.75em;
+}
+
+.text-1 {
+    font-family: 'SpaceGrotesk-Regular';
+    font-size: 1.125em;
+}
+
+.text-space-grotesk-head {
+    font-family: 'Rajdhani-Medium';
+    font-size: 0.875em;
+}
+
+.text-randjani-head {
+    font-family: 'Rajdhani-Medium';
+    font-size: 1.125em;
+
+}
+
+.margin-200 {
+    margin-top: 12.5em;
+}
+
+
+/*===============================================================
+ CSS GLOBAL
+ ================================================================*/
+html {
+    margin-top: 0px;
+}
+
+body {
+    margin-top: -0.625em;
+    background-color: black;
+    padding: 0em 6.375em;
+}
+
+/* 
+    || HEADER STYLE 
+*/
+#page-top h1 {
+    background-image: url('../images/logos/logohome.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10vw;
+    height: 5vw;
+    cursor: pointer;
+}
+
+header {
+    padding: 2em 6.375em 2em 6.375em;
+    border: 0.1875em solid rgba(188, 187, 189, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  
+    || NAV STYLE 
+*/
+nav {
+    float: right;
+}
+
+nav ul {
+    display: inline-flex;
+}
+
+nav a {
+    color: white;
+    font-size: 1.25em;
+    text-decoration: none;
+    margin-left: 0.625em;
+}
+
+nav a[class='active'] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*
+    || STYLE FOR SECTION FOOTER 
+*/
+footer {
+    text-align: center;
+    padding: 3.125em 6.375em 3.125em 6.375em;
+    border: 0.1875em solid rgba(188, 187, 189, 0.2);
+    border-top: none;
+    border-bottom: none;
+}
+
+footer .text {
+    font-size: 0.75em;
+}
+
+footer .logos {
+    padding: 3.125em;
+}
+
+footer .logos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .logos ul li {
+    padding: 1%;
+}
+
+.-ml-5 {
+    margin-left: -1.25em;
+}
+
+/* ========================== SIDEBAR ================================*/
+aside {
+    float: left;
+    position: fixed;
+    text-align: center;
+    right: 4.5vw;
+    bottom: 5vw;
+}
+
+aside img {
+    border: 1px solid transparent;
+    width: 8vw;
+    height: 4vw;
+}
+
+aside .social-network {
+    margin-top: 30%;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+
+/* ============= CONTENT STYLE =====================*/
+main {
+    border: 0.1875em solid rgba(188, 187, 189, 0.2);
+    padding: 1.25em;
+    border-bottom: none;
+}
+
+/* TEXT CENTER */
+.text-center {
+    text-align: center;
+}
+
+.hover-jaune-bataman:hover {
+    filter: invert(6%) sepia(85%) saturate(5811%) hue-rotate(6deg) brightness(87%) contrast(109%);
+}
+
+/*.hover-jaune-bataman {
+    border: 1px solid transparent;
+}*/
+
+.mt-10 {
+    margin-top: 10%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/*============ ANIMATION ==================*/
+/* ZOOM DE 10% */
+.animate-zoom:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* FADE IN */
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-3.125em);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.message {
+    font-size: 1.5em;
+}
