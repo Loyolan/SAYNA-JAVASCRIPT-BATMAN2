@@ -59,3 +59,14 @@ body {
 .game .content-game button:hover {
     opacity: 1;
 }
+
+/**
+ *  || GAME STYLE 
+ */
+.game .content-game .questions {
+    height: 37vw;
+}
+
+p[class='question'] {
+    font-size: 1.5em;
+}
