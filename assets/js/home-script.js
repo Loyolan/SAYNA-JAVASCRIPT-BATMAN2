@@ -72,3 +72,28 @@ closePopup.addEventListener("click", function() {
   popupE.style.display = "none";
 });
 
+/**
+ *  || SCROLL TO HEROS AND ENEMY 
+ */
+// Get buttons
+const scrollToHeros = document.getElementById('scroll-to-heros');
+const scrollToEnemy = document.getElementById('scroll-to-enemy');
+
+// Get destinations
+const heros = document.getElementById('heros');
+const enemy = document.getElementById('enemy');
+
+// Functions scroll
+scrollToHeros.addEventListener('click', ()=> {
+  window.scrollTo({
+    top: heros.offsetTop,
+    behavior: 'smooth'
+  });
+})
+
+scrollToEnemy.addEventListener('click', ()=>{
+  window.scrollTo({
+    top: enemy.offsetTop,
+    behavior: 'smooth'
+  })
+})
