@@ -36,3 +36,31 @@ batmanDownButton.addEventListener("click", () => {
 /**
  *  || APPARITION PROSSIVE 
  */
+// Récupérez tous les éléments avec la classe "fade-slide"
+const fadeSlideElements = document.querySelectorAll('.fade-in');
+
+// Fonction pour vérifier si un élément est visible à l'écran
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+// Fonction pour gérer le défilement et l'apparition progressive des éléments avec un effet de slide
+function handleScrollFadeSlide() {
+  fadeSlideElements.forEach((element) => {
+    if (isElementVisible(element)) {
+      element.style.opacity = '1';
+      element.style.visibility = 'visible';
+      element.style.transform = 'translateX(0)';
+    }
+  });
+}
+
+// Ajoutez un gestionnaire d'événement de défilement pour appeler la fonction handleScrollFadeSlide
+window.addEventListener('scroll', handleScrollFadeSlide);
+
+// Appelez la fonction handleScrollFadeSlide une fois au chargement initial pour afficher les éléments initialement visibles
+handleScrollFadeSlide();

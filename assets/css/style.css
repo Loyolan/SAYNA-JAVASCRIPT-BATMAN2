@@ -234,9 +234,16 @@ main {
 }
 
 /* FADE IN */
-.fade-in {
+.fade-in-start {
     animation-name: fade-in;
     animation-duration: 3s;
+}
+
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-4em); /* Décalage initial de -20px vers la gauche */
+    transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
 }
 
 @keyframes fade-in {
