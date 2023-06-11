@@ -64,7 +64,7 @@
     <main>
         <!-- INTRODUCTION -->
         <section class="introduction">
-            <div class="part-title">
+            <div class="part-title fade-in-start">
                 <h1>LET’S PLAY A <br> LITTLE GAME...</h1>
             </div>
             <div class="margin-200">
@@ -73,9 +73,9 @@
         </section>
         <section class="game" id="start">
             <div class="content-game">
-                <h2>connaissez vous bien le chevalier noir ?</h2>
+                <h2 class="fade-in">connaissez vous bien le chevalier noir ?</h2>
                 <div>
-                    <img src="./assets/images/game/Batgame_2.png">
+                    <img class="fade-zoom" src="./assets/images/game/Batgame_2.png">
                 </div>
                 <button onclick="startGame()">DÉMARRER LE QUIZ</button>
             </div>
@@ -88,13 +88,18 @@
                         
                     </p>
                     <div class="responses">
-                        <div class="image">
-                            <img class="fade-in-start" id="image" src="">
+                        <div class="image" id="image">
+                            
                         </div>
                         <div class="choix">
-                            <ul id="choices">
+                            <form id="form-res">
+                                <ul id="choices">
                                 
-                            </ul>
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="illustrations">
+                            
                         </div>
                     </div>
                 </div>
@@ -148,21 +153,15 @@
             </div>
     </footer>
     <!-- POPUPBOX ERROR -->
-    <!-- <div class="popup-error">
-        <div class="popup-content part-3">
-            <h2>Erreur</h2>
-            <ul id="message-error">
-                
-            </ul>
-            <button id="close-popup">OK</button>
-        </div>
-    </div> -->
-    <!-- POPUPBOX MESSAGE -->
-    <!-- <div class="popup-message">
+    <div class="popup-error">
         <div class="popup-content">
-            <span class="message">MESSAGE REÇU !</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-message">
+                
+            </p>
+            <button id="restart-quiz">RECOMMENCER LE QUIZ</button>
         </div>
-    </div> -->
+    </div>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/game-script.js"></script> 
 </body>

@@ -142,7 +142,7 @@ nav a:hover {
 */
 footer {
     text-align: center;
-    padding: 3.125em 6.375em 3.125em 6.375em;
+    padding: 12em 6.375em 3.125em 6.375em;
     border: 0.1875em solid rgba(188, 187, 189, 0.2);
     border-top: none;
     border-bottom: none;
@@ -296,6 +296,21 @@ main {
     animation-duration: 3s;
 }
 
+.fade-in-right {
+    animation-name: fade-in-right;
+    animation-duration: 3s;
+}
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(3.125em);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .fade-in {
     opacity: 0;
     visibility: hidden;
@@ -319,6 +334,12 @@ main {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.show-zoom {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .message {
