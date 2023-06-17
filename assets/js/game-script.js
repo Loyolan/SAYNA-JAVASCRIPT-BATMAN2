@@ -121,6 +121,9 @@ const data = [
 }
 ];
 
+/**
+ * || CREATE UTILS VARIABLES
+ */
 let progress = 0;
 let start = document.getElementById('start');
 let game = document.getElementById('game');
@@ -137,6 +140,9 @@ let popupTitle = document.getElementById('popup-title');
 let popupMessage = document.getElementById('popup-message');
 let restartQuiz = document.getElementById('restart-quiz');
 
+/**
+ * || FUNCTION CHANGE THE CONTENT OF FOR EACH NEXT
+ */
 function changeContent(game) {
 	// DELETE ALL PREVIOUS ELEMENTS
 	choices.innerHTML = "";
@@ -160,6 +166,7 @@ function changeContent(game) {
   	image.style.opacity = '1';
   	image.style.transform = 'scale(1)';
 	}, 100);
+	// CHOICES LIST
 	for(let i=0; i<game.choices.length; i++) {
 		let li = document.createElement('li');
 		let input = document.createElement('input');
@@ -179,6 +186,7 @@ function changeContent(game) {
 		});
 		choices.appendChild(li);
 	}
+	// ILLUSTRATION IMAGES
 	for(let i=0; i<game.illustrations.length; i++) {
 		let ill = document.createElement('img');
 		ill.setAttribute('src', "./assets/images/game/"+ game.illustrations[i].img);
@@ -199,54 +207,86 @@ function changeContent(game) {
 	progress += 1;
 }
 
+/**
+ * || START GAME
+ */
 function startGame() {
 	changeContent(data[progress]);
 	start.style.display = 'none';
 	game.style.display = 'block';
 }
 
+/**
+ * || IF USER GIVE WRONG ANSWER OR WIN GAME AND WANT TO RESTART ANOTHER PART
+ */
 restartQuiz.addEventListener('click', ()=> {
+	// Hide pop up and show start
 	popupE.style.display = 'none';
 	start.style.display = 'block';
 	game.style.display = "none";
 	progress = 0;
+	// Initialize road
 	userResponses = [];
 });
 
+/**
+ * || SHOW POPUP IF USER GIVE WRONG ANSWER OR WIN THE GAME
+ */
 function showPopup(t, m) {
 	popupE.style.display = 'block';
 	popupTitle.innerHTML = t;
 	popupMessage.innerHTML = m;
 }
 
+/**
+ * || FUNCTION COMPARE THE USER RESPONSES AND RIGHT RESPONSE
+ */
 function verifyAnswers() {
 	let res = true;
 	for(let i=0; i<userResponses.length; i++) {
-		if (userResponses[i].responses[0] !== data[i].responses[0]) {
+		// IF LENGTH OF RESPONSES ARE NOT EQUAL, WRONG
+		if(userResponses[i].responses.length != data[i].responses.length) {
 			res = false;
-			console.log('I M FALSE')
+			break;
+		}
+		// IF RESPONSES ARE NOT EQUAL
+		if (userResponses[i].responses[0] != data[i].responses[0]) {
+			res = false;
 			break;
 		}
 	}
 	return res;
 }
 
+/**
+ * || FUNCTION NEXT
+ */
 function next() {
+	// ADD USER RESPONSES TO ARRAY USERRESPONSES
 	const checkboxes = formRes.querySelectorAll('input[type="checkbox"]:checked');
 	const checkedNames = Array.from(checkboxes).map(checkbox => checkbox.name);
 	userResponses.push({'id': progress, 'responses': checkedNames});
+	// VERIFY USER RESPONSE
 	if(!verifyAnswers()) {
+			// SHOW POPUP WITH THIS MESSAGE IF PROGRESS LESS THAN SIX
 		if (progress < 6){
 			showPopup(progress +"/15 C'EST PAS TOUT A FAIT CA...", "Oula, Heuresement que le Riddler est sous les verrous.. Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est perdu");
+			// SHOW POPUP WITH MESSAGE IF PROGRESS LESS THAN ELEVEN
 		} else if (progress < 11){
 			showPopup(progress +"/15 PAS MAL !", "Encore un peu d'entrainement avec le Chevalier Noir vous serait benefique, mais vous pouvez marcher la tete haute de vos connaissances sont la. A vous de les consolider, foncez Gotham est votre terrain de chasse !");
+			// SHOW POPUP WITH MESSAGE IF PROGRESS GREATER THAN ELEVEN
 		} else {
 			showPopup(progress +"/15 PRESQUE !", "Vous y etiez presque ! Ne baissez pas le bras... Encore un peu d'effort et vous y arriverez!");
 		}
+
 	} else {
 		if (progress === 15) {
 			showPopup(progress +"/15 PAS MAL !", "Vous etes veritablement un super fan de l'univers Batman! <br> Comics, films, rien ne vous echappe. Bruce Wayne a de quoi etre fier, Gotham est en paix et Batman peut prendre sa retraite, vous veillez aux grains");
 		}
 	}
-	changeContent(data[progress]);
+	// SHOW NEXT IF USER ANSWERS ARE ALLRIGHT
+	if(progress < 15){
+		changeContent(data[progress]);
+	}
 }
+

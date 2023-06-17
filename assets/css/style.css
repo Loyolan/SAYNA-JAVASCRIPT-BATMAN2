@@ -345,3 +345,10 @@ main {
 .message {
     font-size: 1.5em;
 }
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}

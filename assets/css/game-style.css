@@ -142,6 +142,7 @@ body {
 .popup-error .popup-content {
     top: 40%;
     text-align: center;
+    position: relative;
 }
 
 #popup-title {
@@ -162,8 +163,10 @@ body {
     padding: 0 10%;
     border: none;
     height: 4.5vw;
-    margin-top: 2em;
     box-shadow: 0px 2px 4px 0px #555;
+    position: absolute;
+    bottom: 1em;
+    left: 20vw;
 }
 
 #restart-quiz:hover {
