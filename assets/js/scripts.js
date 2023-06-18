@@ -100,7 +100,6 @@ handleScrollFadeZoom();
  */
 // Get the canvas context
 const canvas = document.getElementById("canvas");
-console.log(canvas);
 const ctx = canvas.getContext("2d");
 
 // Set the canvas position to fill the entire window
@@ -117,10 +116,9 @@ const mouse = {
 
 // Load the image
 const image = new Image();
-image.src = "assets/images/logos/logo_bat_flèche_2.png";
+image.src = "assets/images/logos/pointer.png";
 image.style.width = '1vw';
 image.style.height = '1vw';
-console.log(image);
 // Define the desired size of the image
 const imageSize = {
     width: 20,

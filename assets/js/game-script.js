@@ -1,125 +1,316 @@
-const data = [
+const images = [
 {
 	"id": 1,
 	"image": "Batgame_3.png",
 	"illustrations": [],
-	"question": "Quel est l’autre nom de l’Homme-Mystère ?",
-	"choices": ["Le Sphinx", "Saphir", "Le Joker"],
-	"responses": ["Le Joker"]
+	"question": "Quel est l’autre nom de l’Homme-Mystère ?"
 },
 {
 	"id": 2,
 	"image": "Batgame_4.png",
 	"illustrations": [],
-	"question": "Quelle est l’ancienne profession de Harley Quinn ?",
-	"choices": ["Infirmière", "Psychiatre", "Dentiste"],
-	"responses": ["Psychiatre"]
+	"question": "Quelle est l’ancienne profession de Harley Quinn ?"
 },
 {
 	"id": 3,
 	"image": "Batgame_5.png",
 	"illustrations": [],
-	"question": "Quel est l’objet fétiche de Double Face ?",
-	"choices": ["Une pièce", "Un livre", "Un couteau"],
-	"responses": ["Une pièce"]
+	"question": "Quel est l’objet fétiche de Double Face ?"
 },
 {
 	"id": 4,
 	"image": "Batgame_6.png",
 	"illustrations": [],
-	"question": "Qui a produit Batman en 1966 ?",
-	"choices": ["Stanley Kubrick", "William Dozie", "Peter Jackson"],
-	"responses": ["William Dozie"]
+	"question": "Qui a realisé Batman en 1966 ?"
 },
 {
 	"id": 5,
 	"image": "Batgame_7.png",
 	"illustrations": [],
-	"question": "Batman c’est aussi le nom d’une ville en...",
-	"choices": ["Turquie", "Islande", "Allemagne"],
-	"responses": ["Turquie"]
+	"question": "Batman c’est aussi le nom d’une ville en..."
 },
 {
 	"id": 6,
 	"image": "Batgame_8.png",
 	"illustrations": [{"img": "Batgame_9.png", "left": "4em", "top": "75%", "width": "20%"}, {"img": "Batgame_9-1.png", "left": "80%", "top": "70%", "width": "15%"}],
-	"question": "Quel vilain apparaît pour la première fois dans le Batman 232 ?",
-	"choices": ["Le Pingouin", "Ra’s al Ghul", "Poison Ivy"],
-	"responses": ["Ra’s al Ghul"]
+	"question": "Quel vilain apparaît pour la première fois dans le Batman 232 ?"
 },
 {
 	"id": 7,
 	"image": "Batgame_10.png",
 	"illustrations": [],
-	"question": "Quelle ville Batman défend-il ?",
-	"choices": ["Gotham City", "Starling City", "Hell’s Kitchen"],
-	"responses": ["Gotham City"]
+	"question": "Quelle ville Batman défend-il ?"
 },
 {
 	"id": 8,
 	"image": "Batgame_11.png",
 	"illustrations": [],
-	"question": "Tim Burton a réalisé deux Batman, qui jouait Batman ?",
-	"choices": ["Georges Clooney", "Val Kilmer", "Mickael Keaton"],
-	"responses": ["Mickael Keaton"]
+	"question": "Tim Burtin a réalisé deux Batman, qui jouait Batman ?"
 },
 {
 	"id": 9,
 	"image": "Batgame_12.png",
 	"illustrations": [{"img": "Batgame_13-1.png", "left": "10%", "top": "67%", "width": "17%"}, {"img": "Batgame_13.png", "left": "70%", "top": "65%", "width": "17%"}],
-	"question": "Dans son premier Batman (1989) Jack Nicholson jouait :",
-	"choices": ["Le Pingouin", "L’Homme Mystère", "Le Joker"],
-	"responses": ["Le Joker"]
+	"question": "Dans son premier Batman (1989) Jack Nicholson jouait :"
 },
 {
 	"id": 10,
 	"image": "Batgame_14.png",
 	"illustrations": [{"img": "Batgame_15.png", "left": "60%", "top": 0, "width": "20%"}, {"img": "Batgame_16.png", "left": "67%", "top": "73%", "width": "15%"}],
-	"question": "Qui est Jonathan Crane ? ",
-	"choices": ["L’Épouvantail", "Le Joker", "Hugo Strange"],
-	"responses": ["L’Épouvantail"]
+	"question": "Qui est Jonathan Crane ? "
 },
 {
 	"id": 11,
 	"image": "Batgame_17.png",
 	"illustrations": [],
-	"question": "Qui est l’interprète de Catwoman dans le nouveau Batman de Matt Reeves (2022) ?",
-	"choices": ["Emma Watson", "Gigi Hadid", "Lola Iolani Momoa", "Zoë Kravitz"],
-	"responses": ["Zoë Kravitz"]
+	"question": "Qui est l’interprète de Catwoman dans le nouveau Batman de Matt Reeves (2022) ?"
 },
 {
 	"id": 12,
 	"image": "Batgame_18.png",
 	"illustrations": [],
-	"question": "Quel est le prénom des parents du jeune Bruce Wayne ?",
-	"choices": ["Thomas et Martha", "Elaine et Georges", "Martha et James"],
-	"responses": ["Thomas et Martha"]
+	"question": "Quel est le prénom des parents du jeune Bruce Wayne ?"
 },
 {
 	"id": 13,
 	"image": "Batgame_19.png",
 	"illustrations": [],
-	"question": "Qui interprète le Joker en 2008 ?",
-	"choices": ["Heath Legder", "Haeth Ledger", "Heath Ledger"],
-	"responses": ["Heath Legder"]
+	"question": " Qui interprète le Joker en 2008 ?"
 },
 {
 	"id": 14,
 	"image": "Batgame_20.png",
 	"illustrations": [],
-	"question": "En quelle année Robin fait il sa première apparition ?",
-	"choices": ["1940", "1939", "1941"],
-	"responses": ["1940"]
+	"question": "En quelle année Robin fait il sa première apparition ?"
 },
 {
 	"id": 15,
 	"image": "Batgame_21.png",
 	"illustrations": [],
-	"question": "Qui est la fille de Batman et Catwoman (Earth - 2) ?",
-	"choices": ["Oracle", "Huntress", "Black Canary"],
-	"responses": ["Huntress"]
+	"question": "Qui est la fille de Batman et Catwoman (Earth - 2) ?"
 }
 ];
+let gameData = [];
+
+// GET DATA FROM API
+fetch('https://batman-api.sayna.space/questions')
+.then(res => res.json())
+.then(data => {
+	// affect value of data to gameData 
+	gameData = data;
+})
+.catch(error => {
+  // Handle any errors
+  console.log(error);
+});
+
+// FAKE DATA (WITH CORRECTION)
+// gameData = [
+// 	{
+// 		"question": "Quel est l’autre nom de l’Homme-Mystère ?",
+// 		"response": [
+// 			{
+// 				"text": "Le Saphinx",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Le Saphir",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Le Joker",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Quelle est l’ancienne profession de Harley Quinn ?",
+// 		"response": [
+// 			{
+// 				"text": "Infimière",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Psychiatre",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Dentiste",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Quel est l’objet fétiche de Double Face ?",
+// 		"response": [
+// 			{
+// 				"text": "Une pièce",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Un livre",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Un couteau",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Quelle ville Batman défend-il ?",
+// 		"response": [
+// 			{
+// 				"text": "Gotham City",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Starling City",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Tananarive",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Tim Burtin a réalisé deux Batman, qui jouait Batman ?",
+// 		"response": [
+// 			{
+// 				"text": "Georges Clooney",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Val Kilmer",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Mickael Keaton",
+// 				"isGood": true
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Quel est le prénom des parents du jeune Bruce Wayne ?",
+// 		"response": [
+// 			{
+// 				"text": "Matina et Adam",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Elaine et Georges",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Martha et James",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Dans son premier Batman (1989) Jack Nicholson jouait :",
+// 		"response": [
+// 			{
+// 				"text": "Le Pingouin",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "L'Homme mystère",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Le Geek",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": " Qui interprète le Joker en 2008 ?",
+// 		"response": [
+// 			{
+// 				"text": "Heath Legder",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Haeth Ledger",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Heath Ledger",
+// 				"isGood": true
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "En quelle année Robin fait il sa première apparition ?",
+// 		"response": [
+// 			{
+// 				"text": "1940",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "1936",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "1941",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Qui est la fille de Batman et Catwoman (Earth - 2) ?",
+// 		"response": [
+// 			{
+// 				"text": "Oracle Huntress",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Black Canary",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "L'Epouvantail",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Batman c’est aussi le nom d’une ville en...",
+// 		"response": [
+// 			{
+// 				"text": "Islande",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Turquie",
+// 				"isGood": true
+// 			},
+// 			{
+// 				"text": "Allemagne",
+// 				"isGood": false
+// 			}
+// 		]
+// 	},
+// 	{
+// 		"question": "Qui a realisé Batman en 1966 ?",
+// 		"response": [
+// 			{
+// 				"text": "Stanley Kubrick",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Andy Warhol",
+// 				"isGood": false
+// 			},
+// 			{
+// 				"text": "Leslie Martinson",
+// 				"isGood": true
+// 			}
+// 		]
+// 	}
+// ]
 
 /**
  * || CREATE UTILS VARIABLES
@@ -132,9 +323,9 @@ let question = document.getElementById('question');
 let imageContent = document.getElementById('image');
 let choices = document.getElementById('choices');
 let illustrations = document.getElementById('illustrations');
-let userResponses = [];
 let formRes = document.getElementById('form-res');
 let popupE = document.querySelector(".popup-error");
+let currentResponse = null;
 // POP UP
 let popupTitle = document.getElementById('popup-title');
 let popupMessage = document.getElementById('popup-message');
@@ -145,6 +336,7 @@ let restartQuiz = document.getElementById('restart-quiz');
  */
 function changeContent(game) {
 	// DELETE ALL PREVIOUS ELEMENTS
+	currentResponse = game.response;
 	choices.innerHTML = "";
 	imageContent.innerHTML = "";
 	illustrations.innerHTML = "";
@@ -159,7 +351,8 @@ function changeContent(game) {
   image.style.transform = 'scale(0)';
   image.style.transition = 'opacity 3s ease, transform 3s ease';
   imageContent.appendChild(image);
-	image.setAttribute('src', "./assets/images/game/"+ game.image);
+  let img = images.find(x => x.question === game.question)
+	image.setAttribute('src', "./assets/images/game/"+ img.image);
 	// DEFINE IMAGE ANIMATION
 	setTimeout(() => {
   	// Modifier les styles pour l'effet fade-zoom
@@ -167,17 +360,17 @@ function changeContent(game) {
   	image.style.transform = 'scale(1)';
 	}, 100);
 	// CHOICES LIST
-	for(let i=0; i<game.choices.length; i++) {
+	for(let i=0; i<game.response.length; i++) {
 		let li = document.createElement('li');
 		let input = document.createElement('input');
 		input.setAttribute('type', 'checkbox');
-		input.setAttribute('name', game.choices[i]);
+		input.setAttribute('name', game.response[i].text);
 		input.addEventListener('change', function(event) {
   		event.stopPropagation(); // Arrête la propagation de l'événement de la case à cocher
   		input.checked = !input.checked;
 		});
 		let span = document.createElement('span');
-		span.textContent = game.choices[i];
+		span.textContent = game.response[i].text;
 		li.appendChild(input);
 		li.setAttribute('class', 'fade-in-right cursor-pointer')
 		li.appendChild(span);
@@ -187,13 +380,13 @@ function changeContent(game) {
 		choices.appendChild(li);
 	}
 	// ILLUSTRATION IMAGES
-	for(let i=0; i<game.illustrations.length; i++) {
+	for(let i=0; i<img.illustrations.length; i++) {
 		let ill = document.createElement('img');
-		ill.setAttribute('src', "./assets/images/game/"+ game.illustrations[i].img);
+		ill.setAttribute('src', "./assets/images/game/"+ img.illustrations[i].img);
 		ill.style.position = 'absolute';
-		ill.style.left = game.illustrations[i].left;
-		ill.style.top = game.illustrations[i].top;
-		ill.style.width = game.illustrations[i].width;
+		ill.style.left = img.illustrations[i].left;
+		ill.style.top = img.illustrations[i].top;
+		ill.style.width = img.illustrations[i].width;
 		ill.style.opacity = '0';
   	ill.style.transform = 'scale(0)';
   	ill.style.transition = 'opacity 3s ease, transform 3s ease';
@@ -211,9 +404,11 @@ function changeContent(game) {
  * || START GAME
  */
 function startGame() {
-	changeContent(data[progress]);
-	start.style.display = 'none';
-	game.style.display = 'block';
+	if (gameData.length > 0){
+		changeContent(gameData[progress]);
+		start.style.display = 'none';
+		game.style.display = 'block';
+	}
 }
 
 /**
@@ -226,7 +421,7 @@ restartQuiz.addEventListener('click', ()=> {
 	game.style.display = "none";
 	progress = 0;
 	// Initialize road
-	userResponses = [];
+	currentResponse = null;
 });
 
 /**
@@ -241,16 +436,10 @@ function showPopup(t, m) {
 /**
  * || FUNCTION COMPARE THE USER RESPONSES AND RIGHT RESPONSE
  */
-function verifyAnswers() {
+function verifyAnswers(userResponse) {
 	let res = true;
-	for(let i=0; i<userResponses.length; i++) {
-		// IF LENGTH OF RESPONSES ARE NOT EQUAL, WRONG
-		if(userResponses[i].responses.length != data[i].responses.length) {
-			res = false;
-			break;
-		}
-		// IF RESPONSES ARE NOT EQUAL
-		if (userResponses[i].responses[0] != data[i].responses[0]) {
+	for(let i=0; i<userResponse.length; i++) {
+		if(!currentResponse.find(x => x.text === userResponse[i]).isGood){
 			res = false;
 			break;
 		}
@@ -265,28 +454,26 @@ function next() {
 	// ADD USER RESPONSES TO ARRAY USERRESPONSES
 	const checkboxes = formRes.querySelectorAll('input[type="checkbox"]:checked');
 	const checkedNames = Array.from(checkboxes).map(checkbox => checkbox.name);
-	userResponses.push({'id': progress, 'responses': checkedNames});
 	// VERIFY USER RESPONSE
-	if(!verifyAnswers()) {
+	if(!verifyAnswers(checkedNames)) {
 			// SHOW POPUP WITH THIS MESSAGE IF PROGRESS LESS THAN SIX
-		if (progress < 6){
-			showPopup(progress +"/15 C'EST PAS TOUT A FAIT CA...", "Oula, Heuresement que le Riddler est sous les verrous.. Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est perdu");
+		if (progress < 4){
+			showPopup(progress +"/"+ gameData.length +" C'EST PAS TOUT A FAIT CA...", "Oula, Heuresement que le Riddler est sous les verrous.. Il faut que vous vous repassiez les films, cette fois en enlevant peut-être le masque qui vous a bloqué la vue ! Aller, rien n'est perdu");
 			// SHOW POPUP WITH MESSAGE IF PROGRESS LESS THAN ELEVEN
-		} else if (progress < 11){
-			showPopup(progress +"/15 PAS MAL !", "Encore un peu d'entrainement avec le Chevalier Noir vous serait benefique, mais vous pouvez marcher la tete haute de vos connaissances sont la. A vous de les consolider, foncez Gotham est votre terrain de chasse !");
+		} else if (progress < 8){
+			showPopup(progress +"/"+ gameData.length +" PAS MAL !", "Encore un peu d'entrainement avec le Chevalier Noir vous serait benefique, mais vous pouvez marcher la tete haute de vos connaissances sont la. A vous de les consolider, foncez Gotham est votre terrain de chasse !");
 			// SHOW POPUP WITH MESSAGE IF PROGRESS GREATER THAN ELEVEN
 		} else {
-			showPopup(progress +"/15 PRESQUE !", "Vous y etiez presque ! Ne baissez pas le bras... Encore un peu d'effort et vous y arriverez!");
+			showPopup(progress +"/"+ gameData.length +" PRESQUE !", "Vous y etiez presque ! Ne baissez pas le bras... Encore un peu d'effort et vous y arriverez!");
 		}
 
 	} else {
-		if (progress === 15) {
-			showPopup(progress +"/15 PAS MAL !", "Vous etes veritablement un super fan de l'univers Batman! <br> Comics, films, rien ne vous echappe. Bruce Wayne a de quoi etre fier, Gotham est en paix et Batman peut prendre sa retraite, vous veillez aux grains");
+		if (progress === 12) {
+			showPopup(progress +"/"+ gameData.length +" PAS MAL !", "Vous etes veritablement un super fan de l'univers Batman! <br> Comics, films, rien ne vous echappe. Bruce Wayne a de quoi etre fier, Gotham est en paix et Batman peut prendre sa retraite, vous veillez aux grains");
+		} else {
+			// SHOW NEXT IF USER ANSWERS ARE ALLRIGHT
+			changeContent(gameData[progress]);
 		}
-	}
-	// SHOW NEXT IF USER ANSWERS ARE ALLRIGHT
-	if(progress < 15){
-		changeContent(data[progress]);
 	}
 }
 
