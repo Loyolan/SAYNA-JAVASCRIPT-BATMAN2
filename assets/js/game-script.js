@@ -96,7 +96,10 @@ let gameData = [];
 fetch('https://batman-api.sayna.space/questions')
 .then(res => res.json())
 .then(data => {
-	// affect value of data to gameData 
+	// affect value of data to gameData
+	data[0].response[1].isGood = false;
+	data[0].response[2].isGood = false;
+	data[4].response[2].isGood = true;
 	gameData = data;
 })
 .catch(error => {
@@ -242,6 +245,7 @@ function verifyAnswers(userResponse) {
 	return res;
 }
 
+btnNext.addEventListener('click', next);
 /**
  * || FUNCTION NEXT
  */
